@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+div, img {
+  --blue:#0091cf;
+}
+
+.container {
+  display:grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 20vh 78vh;
+  font-family: 'Roboto';
+}
+
+.sidebar {
+  background-color: var(--blue);
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 1;
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  grid-template-rows: repeat(11, max(1fr, 15%));
+  gap:8px;
+  padding: 16px;
+}
+
+.sidebar > .item1 {
+  grid-row-start: 3;
+}
+
+.sidebar > .item2 {
+  grid-row-start: 4;
+}
+
+.sidebar > .item3 {
+  grid-row-start: 5;
+}
+
+.sidebar > .item4 {
+  grid-row-start: 6;
+}
+
+.sidebar > .item5 {
+  grid-row-start: 7;
+}
+
+.sidebar > .item6 {
+  grid-row-start: 8;
+}
+
+.sidebar > .item7 {
+  grid-row-start: 9;
+}
+
+.sidebar > .item8 {
+  grid-row-start: 10;
+}
+
+
+.sidebar > .item_dash {
+  color: white;
+  font-size:24px;
+  font-weight: bold;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.sidebar > img[src="images/pi-box.svg"]{
+  height: 42px;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.sidebar > img {
+  height: 28px;
+  filter: invert(1);
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
+
+.sidebar > div {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  color: white;
+  font-size:18px;
+  font-weight: bold;
+}
+
+.sidebar > .item_pos{
+  color: white;
+  font-size:18px;
+  font-weight: bold;
+  grid-row-start:unset;
+}
+
+.main {
+  background-color: rgb(210, 210, 210);
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 3fr 2fr;
+  padding: 8px;
+}
+
+.main > .projects {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.1fr repeat(3, 1fr);
+  gap: 16px;
+  padding: 8px;
+}
+
+.main > .projects > #main_text {
+  grid-row-start: 1;
+  grid-row-end: 1;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.header {
+  grid-row-start: 1;
+  grid-row-end: 1;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 8px;
+  padding: 16px;
+  
+}
+
+.item_search > img {
+  height: 24px;
+}
+
+.item_lowprofile {
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+}
+
+.item_lowprofile > img {
+  border-radius: 50%;
+  height: 64px;
+  width: 64px;
+  grid-row-start: 1;
+  grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
+
+.item_search {
+  display: grid;
+  grid-template-columns: repeat(2,min(500px, 5%));
+  grid-template-rows: 1fr;
+  align-items: center;
+  justify-content: start;
+}
+
+.item_highprofile{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.item_highprofile > img{
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+}
+
+#project {
+  background-color: white;
+  padding: 16px;
+  border-radius: 8px;
+  border-left: 0.5rem solid rgb(227, 174, 0);
+  box-shadow: 0 2px 2px rgb(0 0 0 / 0.2);
+}
+
+.announcements {
+  display: grid;
+  grid-template-rows: 0.1fr 2fr;
+  gap: 16px;
+  padding:8px;
+  
+}
+
+.list {
+  background-color: white;
+  border-radius: 8px;
+  display: grid;
+  box-shadow: 0 2px 2px rgb(0 0 0 / 0.2);
+}
+
+.content {
+  gap:8px;
+  padding: 16px;
+  border-bottom: 1px solid rgb(61, 61, 61);
+
+}
+
+.trending > .list {
+  padding: 16px;
+  box-shadow: 0 2px 2px rgb(0 0 0 / 0.2);
+}
+
+.trending {
+  gap: 8px;
+  padding: 8px;
+  display: grid;
+  grid-template-rows: 1fr 9fr;
+}
+
+#pinproj, #description{
+  color: rgb(61, 61, 61);
+  font-size: 12px;
+}
+
+#username, #hi{
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#main_text{
+  font-size:20px;
+  font-weight: bold;
+}
+
+#title, #name {
+  font-size:18px;
+  font-weight: bold; 
+}
+
+.title_announcements{
+  font-size:14px;
+  font-weight: bold; 
+}
+
+.text_announcements{
+  color: rgb(61, 61, 61);
+  font-size: 10px;
+}
+
+#profname {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.item_buttons {
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  gap: 16px;
+}
+
+.item_buttons > div {
+  width: 5rem;
+  height: 2rem; 
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  font-size: 14px;
+  color: white;
+  font-weight: bold;
+  background-color: var(--blue);
+  border-radius: 16px;
+}
+
+textarea {
+  border: 0;
+  background-color: rgb(210, 210, 210);
+  border-radius: 16px;
+  width: 30rem;
+}
